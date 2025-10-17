@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# React DataGrid - Animaker Front-End Developer Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Live Demo:** [https://spreadsheet-one-steel.vercel.app/](https://spreadsheet-one-steel.vercel.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚙️ Installation & Setup
 
-## Expanding the ESLint configuration
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/react-datagrid-assessment.git
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# 2. Navigate to the project directory
+cd react-datagrid-assessment
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# 3. Install dependencies
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# 4. Run the development server
+npm run dev
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🧩 Features Overview
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+✏️ Editable Cells
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Click or double-click to edit.
+
+Press Enter or blur to save.
+
+Press Esc to cancel edits.
+
+➕ Add Row / Column
+
+Adds new labeled rows (Row n) and header columns (Col n).
+
+New cells are empty and editable.
+
+🖱️ Selection
+
+Click + drag to select rectangular ranges.
+
+Shift + Click extends selection from the first selected cell.
+
+Highlighted area visually represents the selected block.
+
+⌨️ Keyboard Navigation
+
+Arrow keys move between cells.
+
+Enter starts editing current cell.
+
+Tab moves right to next cell.
+
+📋 Copy / Cut / Paste
+
+Ctrl + C → Copy selected range.
+
+Ctrl + X → Cut (copy + clear).
+
+Ctrl + V → Paste data.
+
+Supports pasting from Excel or Google Sheets.
+
+Grid auto-expands if pasted data overflows.
+
+💾 Local Storage
+
+Grid state persists after page refresh or tab close.
